@@ -1,0 +1,202 @@
+.navBar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 110px;
+    border-bottom: 1px solid hsl(220, 14%, 75%) ;
+}
+ul, li{
+    text-decoration: none;
+    list-style: none;
+}
+.menu-mobile{
+    display: none;
+}
+.logo{
+    width: 15%;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+.menu-list{
+    display: flex;
+    width: 70%;
+   
+}
+.closeMenuBtn{
+    display: none;
+}
+.menu-list li{
+    display: flex;
+    align-items: center;
+    margin-right:  2rem;
+    border-bottom: 4px solid transparent;
+    height: 108px;
+}
+.menu-list li:hover{
+    cursor: pointer;
+    border-bottom: 4px solid hsl(26, 100%, 55%);
+   
+}
+.profile-section{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 100;
+}
+.profile-section img{
+    width: 25%;
+}
+.mycart{
+    cursor: pointer;
+}
+.cartlist {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    width: 360px;
+    min-height: 255px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    z-index: 999;
+    display: none;
+    transition: all .3s ease;
+}
+.cartlist.show {
+    display: block;
+}
+.cartlist h3{
+    margin: 1rem 1rem
+}
+hr{
+    border: 0.5px solid hsl(220, 14%, 75%);
+}
+.itemPick{
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.itemPick img{
+    width: 20%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.itemName{
+    font-size: 1rem;
+    color: hsl(220, 14%, 75%);
+}
+.itemPrice{
+    margin-top: .5rem;
+    color: hsl(220, 14%, 75%);
+}
+.itemPrice strong{
+   color: hsl(220, 13%, 13%);
+}
+.checkoutBtn{
+    background-color: hsl(26, 100%, 55%);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 1rem;
+    width: 90%;
+    display: block;
+    margin: 3rem auto 1rem auto;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.profileUser{
+    transition: all .3s ease-in;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+.profileUser:hover{
+    border: 1px solid hsl(26, 100%, 55%);
+    cursor: pointer;
+    
+}
+.deleteBtn{
+    cursor: pointer;
+}
+@media only screen and (max-width:1100px){
+    .menu-list{
+        margin-left: 2rem;
+    }
+    .profile-section img{
+        width: 35%;
+    }
+}
+@media only screen and (max-width:760px){
+    .navBar{
+        justify-content: space-around;
+        height: 70px;
+    }
+    .menu-mobile{
+        display: block;
+        cursor: pointer;
+    }
+    .menu-list{
+        position: absolute;
+        top: 0;
+        left: -1000px;
+        height: 100vh;
+        width: 70vw;
+        z-index: 1000;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 1.5rem 0 0 1.5rem;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+    .menu-list.showMenu{
+        left: -41px;
+        opacity: 1;
+    }
+    .menu-list li{
+        display: flex;
+        align-items: center;
+        margin-right: 0;
+        margin-top: 1.5rem;
+        border-bottom: none;
+        height: 20px;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    .menu-list li:hover{
+        cursor: pointer;
+        border-bottom: none;
+    }
+    .logo{
+        margin-left: 0;
+        justify-self: flex-start;
+        width: 50%;
+    }
+    .profile-section{
+        width: 30%;
+    }
+    .cartlist {
+        position: absolute;
+        top: 60px;
+        right: 25%;
+        width: 80vw;
+    }
+    .closeMenuBtn{
+        display: block;
+        margin-bottom: 3rem;
+    }
+    .overlayMenu.showMenu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        min-height: 100vh;
+        width: 100vw;
+        background-color: rgba(0,0,0,0.7);
+    }
+    .profile-section img{
+        width: 15%;
+    }
+}
